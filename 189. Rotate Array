@@ -26,6 +26,7 @@ class Solution {
     public void rotate(int[] nums, int k) {
         
         int n = nums.length-1;
+        k = k % nums.length;  // Handle cases where k is greater than array length
         reverse(nums,0,n);
 
         reverse(nums,k,n);
